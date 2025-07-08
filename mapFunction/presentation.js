@@ -41,7 +41,7 @@ export function startPresentation(selectedLayer, filteredGeojsonData, filteredCs
 
                 const coordinates = ol.proj.fromLonLat([longitude, latitude]);
 
-                const popupContent = `<h3>${feature.name_en || feature.name_ru || feature.name || 'Без названия'}</h3>
+                const popupContent = `<h3>${feature.name_ru || feature.name_en || feature.name || 'Без названия'}</h3>
                                       <p>Широта: ${latitude.toFixed(5)}, Долгота: ${longitude.toFixed(5)}</p>`;
                 const popup = new ol.Overlay({
                     element: document.createElement('div'),
