@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.control-container {
+    margin: 4px;
+}
+
+#map {
+    width: 100vw;
+    height: 65vh;
+}
+
+#table-container {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+#table-container table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+#table-container th,
+#table-container td {
+    padding: 6px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.9em;
+}
+
+#table-container thead {
+    background-color: #f2f2f2;
+}
+
+#table-container tbody {
+    display: block;
+    max-height: 26vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#table-container thead,
+#table-container tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#table-container thead {
+    width: calc(100% - 1em);
+}
+
+#table-search-input,
+#presentbutton {
+    padding: 8px 12px;
+    margin: 4px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#presentbutton {
+    margin-left: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+#presentbutton:hover {
+    border-color: #888;
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+#presentbutton:active {
+    border-color: #ccc;
+    background-color: #ddd;
+    color: #333;
+    transform: translateY(1px);
+}
+
+#layer-switcher {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.layer-radio-label {
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+#table-search-container,
+#layer-switcher {
+    display: inline-block;
+}
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid #333;
+    bottom: 40px;
+    left: -125px;
+    min-width: 250px;
+    max-width: 250px;
+    max-height: 200px;
+    font-size: 0.9em;
+    word-break: break-word;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    overflow: auto;
+}
